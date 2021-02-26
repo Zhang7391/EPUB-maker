@@ -46,7 +46,7 @@ content: 產生連結到chpater*的連結，最高支援到**10^77 - 1位數**�
 ```
 
 #### **如何使用**
-	編譯器版本至少須為**C++11**否則程式無法執行
+	編譯器版本至少須為C++11否則程式無法執行
 
 ##### **Windows**
 
@@ -93,7 +93,7 @@ BigNumber.cpp & BigNumber.h
 
 
 
-### **EPUB makers (English discript)**
+### **EPUB makers (English discription)**
 
 At present, there are only two small tools, because I don't know what I lack.
 In a word, I first wrote two tools I need to make EPUB, namely, content and chapter.
@@ -119,7 +119,6 @@ chapter: Generate corresponding chpater*.xhtml files in chpater.txt
 <body>
   <h1>第一章 略</h1>
 <!-- This will correspond to the first line in Notepad, and the second generated XHTML will correspond to the second line in Notepad, and so on...... -->
-<!-- JUST CONVERT TO CHINESE NUMBER! -->
 
   <p>(This article)</p>
 
@@ -145,7 +144,7 @@ Defaults to import a few CSS, you can change the code according to their own nee
 ```
 
 #### **How to use**
-    The G++ version must be at least **C++11**, otherwise the program can't be executed.
+    The G++ version must be at least C++11, otherwise the program can't be executed.
 
 ##### **Windows**
 
@@ -166,7 +165,7 @@ Defaults to import a few CSS, you can change the code according to their own nee
 
 ##### **Linux**
 ```
-wget https://github.com/Zhang7391/EPUB-maker.git
+git clone https://github.com/Zhang7391/EPUB-maker.git
 cd EPUB-maker
 ```
 * chapter
