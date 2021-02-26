@@ -1,4 +1,4 @@
-### **EPUB小工具**
+### **EPUB小工具(中文介紹)**
 
 目前只有兩個小工具，因為本人目前還不知道缺啥。
 總之就先寫了自己在製作EPUB上所需要的兩個工具，也就是目錄產生器(content)，和章節產生器(chapter)。
@@ -46,7 +46,7 @@ content: 產生連結到chpater*的連結，最高支援到**10^77 - 1位數**�
 ```
 
 #### **如何使用**
-	* 編譯器版本至少須為**C++11**否則程式無法執行
+	編譯器版本至少須為**C++11**否則程式無法執行
 
 ##### **Windows**
 
@@ -88,5 +88,104 @@ cd EPUB-maker
 #### **部分程式碼引用原出處**
 
 BigNumber.cpp & BigNumber.h
-	* 原作者: FFMG
-	* [Github頁面](https://github.com/FFMG/myoddweb.bignumber.cpp)
+* 原作者: FFMG
+* [Github頁面](https://github.com/FFMG/myoddweb.bignumber.cpp)
+
+
+
+### **EPUB makers (English discript)**
+
+At present, there are only two small tools, because I don't know what I lack.
+In a word, I first wrote two tools I need to make EPUB, namely, content and chapter.
+Because I spend the most time in these two parts when I make them.
+If you want to add any EPUB tool(s), please pull or use GitHub issues. I will merge them as soon as possible.
+Maybe, write programs or give feedback on issues.
+
+#### **EPUB maker discript**
+
+chapter: Generate corresponding chpater*.xhtml files in chpater.txt
+```html
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>chapter2</title>
+  <link href="../Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>第一章 略</h1>
+<!-- This will correspond to the first line in Notepad, and the second generated XHTML will correspond to the second line in Notepad, and so on...... -->
+<!-- JUST CONVERT TO CHINESE NUMBER! -->
+
+  <p>(This article)</p>
+
+</body>
+</html>
+```
+
+content: Link generate a link to chpater*, the maximum support to the **10^77 - 1** digit output.
+Defaults to import a few CSS, you can change the code according to their own needs to produce different combinations
+```html
+      <tr>
+        <td class="mbt05 w40 tdtop"><a class="nodeco color1" href="../Text/chapter1000000.xhtml">第一百萬章</a></td>
+
+        <td class="mbt05 left"><a class="nodeco color1" href="../Text/chapter1000000.xhtml">(chapter title)</a></td>
+      </tr>
+      <tr>
+        <td class="mbt05 w40 tdtop"><a class="nodeco color1" href="../Text/chapter1000001.xhtml">第一百萬零一章</a></td>
+
+        <td class="mbt05 left"><a class="nodeco color1" href="../Text/chapter1000001.xhtml">(chapter title)</a></td>
+      </tr>
+
+<!-- JUST CONVERT TO CHINESE NUMBER! -->
+```
+
+#### **How to use**
+    The G++ version must be at least **C++11**, otherwise the program can't be executed.
+
+##### **Windows**
+
+* chapter
+    1. Enter the Windows/chapter folder and find the chapter.cpp, BigNumber.cpp, and BigNumber.h
+    2. Open any compiler software (at least **C++11**) and compile the above three files at the same time.
+    3. Paste the titles line by line in chapter.txt, which in the same folder
+    4. Execute the .exe file
+    5. Please enter the beginning chapter
+    6. Wait for the program to finish running, and you can find the written chapter*.xhtml file in the same folder
+
+* content
+    1. Enter the Windows/content folder and find the chapter.cpp, BigNumber.cpp, and BigNumber.h
+    2. Same as step 2 above
+    3. Execute the .exe file
+    4. Please enter the beginning chapter, and then enter the ending chapter
+    5. open content.txt, and post the results where you need them
+
+##### **Linux**
+```
+wget https://github.com/Zhang7391/EPUB-maker.git
+cd EPUB-maker
+```
+* chapter
+    1. `cd Linux/chpater`
+    2. `g++ -g -Wall chapter.cpp BigNumber.cpp -o chapter.exe`
+    3. `vi chapter.txt`
+    4. Paste the titles line by line
+    5. `./chapter.exe`
+    6. get some chpater*.xhtml
+
+* content
+    1. `cd Linux/content`
+    2. `g++ -g -Wall content.cpp BigNumber.cpp -o content.exe`
+    3. `./content.exe`
+    4. Please enter the beginning chapter, and then enter the ending chapter
+    5. `vi content.txt`
+
+#### **Source of some code references**
+
+BigNumber.cpp & BigNumber.h
+* Original author: FFMG
+* [Github page](https://github.com/FFMG/myoddweb.bignumber.cpp)
