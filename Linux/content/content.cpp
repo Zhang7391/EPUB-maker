@@ -106,6 +106,7 @@ void control::NumberConv(BigNumber now)
             if (reversal.ToInt() == 0) break;
         }
         if (this->fake && this->digits == 4) if (reversal.Mod(1000).ToInt() == 0) break;
+		if(check == 2 && reversal.Mod(10).ToInt() == 1 && digits == 2) this->ten = false;
 
         key = this->NumberToChinese(reversal.Mod(10).ToInt(), key);
         flag = true;
