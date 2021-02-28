@@ -67,7 +67,7 @@ content: 產生連結到chpater*的連結，最高支援到**10^77 - 1位數**�
 
 ##### **Linux**
 ```
-wget https://github.com/Zhang7391/EPUB-maker.git
+git clone https://github.com/Zhang7391/EPUB-maker.git
 cd EPUB-maker
 ```
 * chapter
