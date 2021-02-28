@@ -71,7 +71,7 @@ wget https://github.com/Zhang7391/EPUB-maker.git
 cd EPUB-maker
 ```
 * chapter
-	1. `cd Linux/chpater`
+	1. `cd Linux/chapter`
 	2. `g++ -g -Wall chapter.cpp BigNumber.cpp -o chapter.exe`
 	3. `vi chapter.txt`
 	4. 一行一行貼上所需的大標題，儲存離開
@@ -169,7 +169,7 @@ git clone https://github.com/Zhang7391/EPUB-maker.git
 cd EPUB-maker
 ```
 * chapter
-    1. `cd Linux/chpater`
+    1. `cd Linux/chapter`
     2. `g++ -g -Wall chapter.cpp BigNumber.cpp -o chapter.exe`
     3. `vi chapter.txt`
     4. Paste the titles line by line

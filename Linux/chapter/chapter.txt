@@ -1,0 +1,9 @@
+第一章 略
+第二章 略
+第三章 略
+以下以此類推 一行一章 有空格沒差
+---
+The first chapter is brief
+The second chapter is brief
+The third chapter is brief
+The following analogy, a line of a chapter with blank space is not bad
