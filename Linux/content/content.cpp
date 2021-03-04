@@ -5,23 +5,25 @@
 using namespace std;
 using namespace MyOddWeb;
 
-ofstream ux("content.txt");
-
 class control
 {
 private:
     int digits = 0;
-    int* table = new int[20];
+    static int *table;
     bool fake = false, ten = true;
     BigNumber begin, end;
 
     void NumberConv(BigNumber);
+	void LoadTableValue(bool);
     bool NumberToChinese(int, bool);
     int DigitsConv(bool);
 
 public:
     void UserInput(void);
 };
+
+int* control::table;
+ofstream ux("content.txt");
 
 int main()
 {
@@ -53,7 +55,7 @@ void control::UserInput(void)
         cin >> space;
         this->end = space;
     }
-    for (int a = 0, b = 1; 20 > a; a++, b += 4) this->table[a] = b;
+	this->LoadTableValue(true);
 
     if (this->begin.IsEqual(0))
     {
@@ -62,7 +64,6 @@ void control::UserInput(void)
     }
    for (; this->end.IsGreaterEqual(this->begin); this->begin.Add(1))
    {
-       cout << this->begin.ToString() << "\n";
        this->fake = false;
        ux << "      <tr>\n        <td class=\"mbt05 w40 tdtop\"><a class=\"nodeco color1\" href=\"../Text/chapter" << this->begin.ToString() << ".xhtml\">第";
        if (this->begin.Mod(10).ToInt() == 0)
@@ -74,6 +75,7 @@ void control::UserInput(void)
        if (fake) this->begin.Sub(1);
        ux << "章</a></td>\n\n        <td class=\"mbt05 left\"><a class=\"nodeco color1\" href=\"../Text/chapter" << this->begin.ToString() << ".xhtml\">(章節標題)</a></td>\n      </tr>\n";
    }
+   this->LoadTableValue(false);
 }
 
 void control::NumberConv(BigNumber now)
@@ -89,7 +91,7 @@ void control::NumberConv(BigNumber now)
         reversal.Mul(10);
         reversal.Add(now.Mod(10));
         now.Div(10).Integer();
-        this->digits++;
+     this->digits++;
     }
     check = this->digits;
 
@@ -265,4 +267,14 @@ int control::DigitsConv(bool ComeIn)
         }
     }
 	return compare;
+}
+
+void control::LoadTableValue(bool load)
+{
+	if(load)
+	{
+		this->table = new int[20];
+		for (int a = 0, b = 1; 20 > a; a++, b += 4) this->table[a] = b;
+	}
+	else delete [] this->table;
 }
