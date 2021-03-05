@@ -51,8 +51,8 @@ content: 產生連結到chpater*的連結，最高支援到**10^77 - 1位數**�
 ##### **Windows**
 
 * chapter
-	1. 進入Windows/chapter資料夾內，找到chapter.cpp, BigNumber.cpp, and BigNumber.h這三個檔案。
-	2. 開啟任意的編譯軟體(至少需有**C++11**)，同時編譯上方三個檔案。
+	1. 進入Windows/chapter資料夾內，找到chapter.cpp這一個檔案。
+	2. 開啟任意的編譯軟體(至少需有**C++11**)，編譯chapter.cpp。
 	3. 在同個資料夾內的chapter.txt裡一行一行貼上所需的大標題
 	4. 執行編譯完所產生的執行檔
 	5. 輸入開始章節號碼(像上方的範例輸出程式碼是從2開始)。
@@ -72,7 +72,7 @@ cd EPUB-maker
 ```
 * chapter
 	1. `cd Linux/chapter`
-	2. `g++ -g -Wall chapter.cpp BigNumber.cpp -o chapter.exe`
+	2. `g++ -g -Wall chapter.cpp -o chapter.exe`
 	3. `vi chapter.txt`
 	4. 一行一行貼上所需的大標題，儲存離開
 	5. `./chapter.exe`
@@ -149,8 +149,8 @@ Defaults to import a few CSS, you can change the code according to their own nee
 ##### **Windows**
 
 * chapter
-    1. Enter the Windows/chapter folder and find the chapter.cpp, BigNumber.cpp, and BigNumber.h
-    2. Open any compiler software (at least **C++11**) and compile the above three files at the same time.
+    1. Enter the Windows/chapter folder and find the chapter.cpp.
+    2. Open any compiler software (at least **C++11**) and compile the "chapter.cpp".
     3. Paste the titles line by line in chapter.txt, which in the same folder
     4. Execute the .exe file
     5. Please enter the beginning chapter
@@ -170,7 +170,7 @@ cd EPUB-maker
 ```
 * chapter
     1. `cd Linux/chapter`
-    2. `g++ -g -Wall chapter.cpp BigNumber.cpp -o chapter.exe`
+    2. `g++ -g -Wall chapter.cpp -o chapter.exe`
     3. `vi chapter.txt`
     4. Paste the titles line by line
     5. `./chapter.exe`
