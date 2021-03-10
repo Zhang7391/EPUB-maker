@@ -87,6 +87,12 @@ cd EPUB-maker
 		4. 一行一行貼上所需的大標題，儲存離開
 		5. `./chapter.exe`
 		6. get some chpater*.xhtml
+	* Python3
+		1. `cd Linux/chapter`
+		2. `vi chapter.txt`
+		3. 一行一行貼上所需的大標題，儲存離開
+		4. `python3 chapter.py`
+		5. get some chpater*.xhtml
 
 * content
 	* C++
@@ -202,6 +208,12 @@ cd EPUB-maker
     	4. Paste the titles line by line.
 	    5. `./chapter.exe`
     	6. get some chpater*.xhtml.
+    * Python3
+        1. `cd Linux/chapter`
+        2. `vi chapter.txt`
+        3. Paste the titles line by line in chapter.txt, which in the same folder.
+        4. `python3 chapter.py`
+        5. get some chpater*.xhtml
 
 * content
 	* C++
