@@ -16,7 +16,7 @@ class Number:
         ux.write("</title>\n  <link href=\"../Styles/style.css\" rel=\"stylesheet\" type=\"text/css\" />\n</head>\n\n<body>\n  <h1>")
         ux.write(WriteLine)
         ux.write("</h1>\n\n  <p>(This article)</p>\n\n</body>\n</html>")
-        self.__number += 1
+        self += 1
         ux.close()
         del filename
 
